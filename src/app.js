@@ -15,7 +15,7 @@ const SearchStack = createStackNavigator();
 function SearchStackView() {
   return (
     <SearchStack.Navigator>
-      <SearchStack.Screen name="SearchView" component={SearchView} />
+      <SearchStack.Screen name="Search" component={SearchView} />
       <SearchStack.Screen name="Details" component={SearchDetailView} />
     </SearchStack.Navigator>
   );
