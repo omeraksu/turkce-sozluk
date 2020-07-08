@@ -1,0 +1,1 @@
+import {Text, View, Button} from 'react-native';import * as React from 'react';import {createStackNavigator} from '@react-navigation/stack';function SearchDetailView() {  return (    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>      <Text>Arama detayı</Text>    </View>  );}export default SearchDetailView;
