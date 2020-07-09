@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
 
-function SvgTdkIconHistory(props) {
+function IconHistory(props) {
   return (
     <Svg
       width={24}
@@ -20,4 +20,4 @@ function SvgTdkIconHistory(props) {
   );
 }
 
-export default SvgTdkIconHistory;
+export default IconHistory;

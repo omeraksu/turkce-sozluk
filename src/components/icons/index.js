@@ -1,3 +1,3 @@
-export { default as TdkIconFav } from './TdkIconFav'
-export { default as TdkIconHistory } from './TdkIconHistory'
-export { default as TdkIconSearch } from './TdkIconSearch'
+export {default as IconFav} from './TdkIconFav';
+export {default as IconHistory} from './TdkIconHistory';
+export {default as IconSearch} from './TdkIconSearch';

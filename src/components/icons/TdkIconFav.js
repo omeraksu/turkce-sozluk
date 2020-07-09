@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
 
-function SvgTdkIconFav(props) {
+function IconFav(props) {
   return (
     <Svg
       width={24}
@@ -20,4 +20,4 @@ function SvgTdkIconFav(props) {
   );
 }
 
-export default SvgTdkIconFav;
+export default IconFav;

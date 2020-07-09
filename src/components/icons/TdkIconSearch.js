@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
 
-function SvgTdkIconSearch(props) {
+function IconSearch(props) {
   return (
     <Svg
       width={28}
@@ -20,4 +20,4 @@ function SvgTdkIconSearch(props) {
   );
 }
 
-export default SvgTdkIconSearch;
+export default IconSearch;
