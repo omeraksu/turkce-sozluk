@@ -1,7 +1,7 @@
-import * as React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import * as React from 'react'
+import Svg, { Path } from 'react-native-svg'
 
-function IconFav(props) {
+function SvgIconFav(props) {
   return (
     <Svg
       width={24}
@@ -9,7 +9,8 @@ function IconFav(props) {
       viewBox="0 0 24 24"
       fill="none"
       className=""
-      {...props}>
+      {...props}
+    >
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -17,7 +18,7 @@ function IconFav(props) {
         fill="#758291"
       />
     </Svg>
-  );
+  )
 }
 
-export default IconFav;
+export default SvgIconFav

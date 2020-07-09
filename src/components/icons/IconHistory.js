@@ -1,7 +1,7 @@
-import * as React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import * as React from 'react'
+import Svg, { Path } from 'react-native-svg'
 
-function IconHistory(props) {
+function SvgIconHistory(props) {
   return (
     <Svg
       width={24}
@@ -9,7 +9,8 @@ function IconHistory(props) {
       viewBox="0 0 24 24"
       fill="none"
       className=""
-      {...props}>
+      {...props}
+    >
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -17,7 +18,7 @@ function IconHistory(props) {
         fill="#758291"
       />
     </Svg>
-  );
+  )
 }
 
-export default IconHistory;
+export default SvgIconHistory

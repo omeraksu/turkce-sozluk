@@ -1,7 +1,7 @@
-import * as React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import * as React from 'react'
+import Svg, { Path } from 'react-native-svg'
 
-function IconSearch(props) {
+function SvgIconSearch(props) {
   return (
     <Svg
       width={28}
@@ -9,7 +9,8 @@ function IconSearch(props) {
       viewBox="0 0 28 28"
       fill="none"
       className=""
-      {...props}>
+      {...props}
+    >
       <Path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -17,7 +18,7 @@ function IconSearch(props) {
         fill="#fff"
       />
     </Svg>
-  );
+  )
 }
 
-export default IconSearch;
+export default SvgIconSearch
