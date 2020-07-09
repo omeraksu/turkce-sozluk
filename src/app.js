@@ -24,7 +24,7 @@ function SearchStackView() {
 function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator initialRouteName="Search">
         <Tab.Screen name="History" component={HistoryView} />
         <Tab.Screen name="Search" component={SearchStackView} />
         <Tab.Screen name="Favorite" component={FavoriteView} />

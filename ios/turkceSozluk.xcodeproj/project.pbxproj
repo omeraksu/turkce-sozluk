@@ -194,7 +194,6 @@
 				67F0839053AEA21414F5984E /* Pods-turkceSozluk-tvOSTests.debug.xcconfig */,
 				BF87AFEBB474241B335E58BB /* Pods-turkceSozluk-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -287,7 +286,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1150;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -610,6 +609,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 777672F2AB7C9796E084168C /* Pods-turkceSozluk-turkceSozlukTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -633,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B594BCC87F0B4F5F12B4F2C /* Pods-turkceSozluk-turkceSozlukTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = turkceSozlukTests/Info.plist;
