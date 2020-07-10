@@ -1,20 +1,24 @@
 import React, { useState } from 'react'
 import { Keyboard } from 'react-native'
 
-import Box from './box'
-
-import { IconSearch, IconX } from './icons'
-import Input from './input'
 import theme from '../utils/theme'
+import { IconSearch, IconX } from './icons'
+
+import Box from './box'
 import Text from './text'
+import Input from './input'
 import Button from './button'
 
-function SearchBox() {
-  const [isFocus, setIsFocus] = useState(false)
+function SearchBox({ onChangeFocus }) {
+  const [isFocus, setFocus] = useState(false)
   const [value, setValue] = useState('')
 
+  React.useEffect(() => {
+    onChangeFocus(isFocus)
+  }, [isFocus, onChangeFocus])
+
   const onCancel = () => {
-    setIsFocus(false)
+    setFocus(false)
     Keyboard.dismiss()
   }
 
@@ -44,7 +48,7 @@ function SearchBox() {
           pl={52}
           borderRadius="normal"
           value={value}
-          onFocus={() => setIsFocus(true)}
+          onFocus={() => setFocus(true)}
           onChangeText={(text) => setValue(text)}
         />
         {value.length > 0 && (
