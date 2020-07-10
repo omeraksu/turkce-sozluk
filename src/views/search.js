@@ -1,7 +1,7 @@
 import * as React from 'react'
 import SafeAreaView from 'react-native-safe-area-view'
 import { useFocusEffect } from '@react-navigation/native'
-import { ImageBackground, StatusBar } from 'react-native'
+import { ImageBackground, StatusBar, Animated } from 'react-native'
 
 import bg from '../assets/bg.jpg'
 
@@ -11,18 +11,33 @@ import Search from '../components/search'
 import { LogoWhite } from '../components/icons'
 
 function SearchView() {
+  const fadeAnim = React.useRef(new Animated.Value(285)).current
   const [isChangeFocus, setChangeFocus] = React.useState(false)
+
+  React.useEffect(() => {
+    if (isChangeFocus) {
+      Animated.timing(fadeAnim, {
+        toValue: 0,
+        duration: 220
+      }).start()
+    } else {
+      Animated.timing(fadeAnim, {
+        toValue: 285,
+        duration: 220
+      }).start()
+    }
+  }, [fadeAnim, isChangeFocus])
 
   useFocusEffect(
     React.useCallback(() => {
-      StatusBar.setBarStyle('light-content')
-    }, [])
+      StatusBar.setBarStyle(isChangeFocus ? 'dark-content' : 'light-content')
+    }, [isChangeFocus])
   )
 
   return (
-    <Box as={SafeAreaView} bg="red" flex={1}>
+    <Box as={SafeAreaView} bg={isChangeFocus ? 'white' : 'red'} flex={1}>
       {/* Header */}
-      <Box position="relative" zIndex={1} height={isChangeFocus ? 0 : 285}>
+      <Box as={Animated.View} position="relative" zIndex={1} height={fadeAnim}>
         <Box
           as={ImageBackground}
           source={bg}
@@ -41,10 +56,16 @@ function SearchView() {
       </Box>
 
       {/* Content */}
-      <Box flex={1} bg="white" pt={26}>
-        <Box p={30} flex={1}>
-          <Text>Selam kanki</Text>
-        </Box>
+      <Box flex={1} bg="white" pt={isChangeFocus ? 0 : 26}>
+        {isChangeFocus ? (
+          <Box px={30} pt={90} flex={1}>
+            <Text>Geçmiş Aramalar</Text>
+          </Box>
+        ) : (
+          <Box p={30} flex={1}>
+            <Text>Öneriler</Text>
+          </Box>
+        )}
       </Box>
     </Box>
   )
