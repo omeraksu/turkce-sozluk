@@ -27,7 +27,7 @@ function SearchStackView() {
         component={SearchView}
         options={() => {
           return {
-            header: () => {}
+            headerShown: false
           }
         }}
       />
