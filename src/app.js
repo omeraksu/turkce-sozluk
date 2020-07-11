@@ -6,23 +6,58 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
+import TabBar from './components/tab-bar'
 import HistoryView from './views/history'
 import FavoriteView from './views/favoriye'
 import SearchView from './views/search'
 import SearchDetailView from './views/detail'
-
-import TabBar from './components/tab-bar'
+import { IconLeft, IconMore } from './components/icons'
 
 import theme from './utils/theme'
+import Button from './components/button'
 
 const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator()
 
 function SearchStackView() {
   return (
-    <Stack.Navigator headerMode="none">
-      <Stack.Screen name="Search" component={SearchView} />
-      <Stack.Screen name="Details" component={SearchDetailView} />
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Search"
+        component={SearchView}
+        options={() => {
+          return {
+            header: () => {}
+          }
+        }}
+      />
+      <Stack.Screen
+        name="Details"
+        component={SearchDetailView}
+        options={({ route, navigation }) => {
+          return {
+            title: (route.params && route.params.title) || '',
+            headerStyle: {
+              backgroundColor: theme.colors.softRed,
+              shadowColor: 'transparent'
+            },
+            headerLeft: () => (
+              <Button
+                height="100%"
+                px={20}
+                onPress={() => navigation.navigate('Search')}
+              >
+                <IconLeft color={theme.colors.textDark} />
+              </Button>
+            ),
+            headerRight: () => (
+              <Button height="100%" px={20}>
+                <IconMore color={theme.colors.textDark} />
+              </Button>
+            )
+          }
+        }}
+      />
     </Stack.Navigator>
   )
 }
