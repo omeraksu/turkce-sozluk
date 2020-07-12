@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.4",
     "@babel/runtime": "^7.10.4",
     "@react-native-community/eslint-config": "^2.0.0",
     "@svgr/cli": "^5.4.0",
