@@ -1,0 +1,1 @@
+import React from 'react'import Box from './box'export default function LoaderText({ children, ...props }) {  return (    <Box bg="light" height={20} width={150} {...props}>      {children}    </Box>  )}

@@ -4,8 +4,8 @@ import Svg, { Path } from 'react-native-svg'
 function SvgIconHand(props) {
   return (
     <Svg
-      width={24}
-      height={24}
+      width={32}
+      height={32}
       viewBox="0 0 32 32"
       fill="none"
       className=""
