@@ -4,9 +4,9 @@ import { useFocusEffect } from '@react-navigation/native'
 import SafeAreaView from 'react-native-safe-area-view'
 
 import Box from '../components/box'
+import HomeSearch from '../components/home-search'
 import SuggestCard from '../components/suggest-card'
 import SearchHistoryList from '../components/search-history-list'
-import HomeSearch from '../components/home-search'
 
 const DATA = [
   {

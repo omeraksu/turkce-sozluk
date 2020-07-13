@@ -3,8 +3,9 @@ import 'react-native-gesture-handler'
 import { ThemeProvider } from 'styled-components'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 
-import theme from './utils/theme'
 import Navigation from './navigation'
+
+import theme from './utils/theme'
 
 function App() {
   return (

@@ -1,18 +1,18 @@
 import * as React from 'react'
 import 'react-native-gesture-handler'
 import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
+import Button from './components/button'
+import SearchView from './views/search'
 import TabBar from './components/tab-bar'
 import HistoryView from './views/history'
 import FavoriteView from './views/favoriye'
-import SearchView from './views/search'
 import SearchDetailView from './views/detail'
 import { IconLeft, IconMore } from './components/icons'
 
 import theme from './utils/theme'
-import Button from './components/button'
 
 const Tab = createBottomTabNavigator()
 const Stack = createStackNavigator()

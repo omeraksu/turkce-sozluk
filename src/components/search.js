@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Keyboard } from 'react-native'
 
-import theme from '../utils/theme'
-import { IconSearch, IconX } from './icons'
-
 import Box from './box'
 import Text from './text'
 import Input from './input'
 import Button from './button'
+import { IconSearch, IconX } from './icons'
+
+import theme from '../utils/theme'
 
 function SearchBox({ onChangeFocus }) {
   const [isFocus, setFocus] = useState(false)
